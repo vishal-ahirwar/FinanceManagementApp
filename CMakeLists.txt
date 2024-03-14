@@ -16,6 +16,9 @@ qt_add_qml_module(appFinanceManagementApp
     URI FinanceManagementApp
     VERSION 1.0
     QML_FILES Main.qml
+    QML_FILES GetStartedPage.qml
+    QML_FILES HomePage.qml
+    QML_FILES BottomDock.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

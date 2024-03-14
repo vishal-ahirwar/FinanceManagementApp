@@ -1,8 +1,18 @@
 import QtQuick
 
 Window {
-    width: 640
-    height: 480
+    width: 600
+    height: 1300
     visible: true
-    title: qsTr("Hello World")
+    id:rootWindow
+    Rectangle
+    {
+        width: parent.width
+        height: parent.height
+        color: "#1d252c"
+    }
+    GetStartedPage{
+        width: parent.width
+        height: parent.height
+    }
 }
