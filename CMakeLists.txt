@@ -19,6 +19,7 @@ qt_add_qml_module(appFinanceManagementApp
     QML_FILES GetStartedPage.qml
     QML_FILES HomePage.qml
     QML_FILES BottomDock.qml
+    RESOURCES android/AndroidManifest.xml android/build.gradle android/res/values/libs.xml android/res/xml/qtprovider_paths.xml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -42,3 +43,7 @@ install(TARGETS appFinanceManagementApp
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+set_property(TARGET app${PROJECT_NAME} APPEND PROPERTY
+QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
+)
+qt_finalize_executable(app${PROJECT_NAME})
